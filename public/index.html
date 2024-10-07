@@ -32,9 +32,7 @@
         /></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li>
-            <a
-              target="_blank"
-              href="https://github.com/kiprotichmartin/"
+            <a target="_blank" href="https://github.com/kiprotichmartin/"
               >GitHub</a
             >
           </li>
@@ -47,14 +45,15 @@
           <div class="col s12 center-align">
             <h1 id="heading">Disaster Awareness Hub</h1>
             <p class="flow-text">
-              Welcome to <strong>Disaster Awareness Hub</strong>, your go-to source for 
-              essential information on how to prepare for, respond to, and recover from 
-              natural and man-made disasters. Whether it's floods, wildfires, earthquakes, 
-              or other emergencies, our mission is to provide you with accurate, up-to-date r
-              esources to help you and your community stay safe. Explore expert tips, 
-              real-time alerts, and practical guides designed to empower you to take action 
-              and stay informed during times of crisis. Together, we can build a more 
-              resilient future by staying prepared and aware.
+              Welcome to <strong>Disaster Awareness Hub</strong>, your go-to
+              source for essential information on how to prepare for, respond
+              to, and recover from natural and man-made disasters. Whether it's
+              floods, wildfires, earthquakes, or other emergencies, our mission
+              is to provide you with accurate, up-to-date r esources to help you
+              and your community stay safe. Explore expert tips, real-time
+              alerts, and practical guides designed to empower you to take
+              action and stay informed during times of crisis. Together, we can
+              build a more resilient future by staying prepared and aware.
             </p>
           </div>
           <div class="col s12 center-align">
@@ -63,8 +62,58 @@
               src="images/natural-disasters-logo.jpg"
             />
           </div>
+          <div class="col s12 center-align">
+            <a
+              class="waves-effect waves-light btn click-me-button modal-trigger"
+              id="clickMeButton"
+              data-target="modal1"
+              ><i class="material-icons left">auto_fix_high</i>Click Me</a
+            >
+          </div>
         </div>
-        <div class="row" id="card-section"></div>
+        <div class="row" id="#card-section"></div>
+      </div>
+
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal modal-fixed-footer">
+        <div class="row modal-content">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input
+                  placeholder="Placeholder"
+                  id="first_name"
+                  type="text"
+                  class="validate"
+                />
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate" />
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate" />
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate" />
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 center-align">
+                <a class="waves-effect waves-light btn" id="formSubmit"
+                  >submit</a
+                >
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </main>
     <script
