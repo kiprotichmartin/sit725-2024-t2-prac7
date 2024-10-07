@@ -2,6 +2,14 @@ var express = require("express");
 var app = express();
 const mongoose = require("mongoose");
 require("dotenv").config();
+const http = require("http");
+const socketIO = require("socket.io");
+
+// Create an HTTP server by wrapping the Express app
+const server = http.createServer(app);
+
+// Initialize Socket.IO with the HTTP server
+const io = socketIO(server);
 
 const mongoString = process.env.DATABASE_URL;
 
@@ -45,7 +53,18 @@ app.get("/api/projects", (req, res) => {
   res.json({ statusCode: 200, data: cardList, message: "Success" });
 });
 
+// let io = require("socket.io")("http");
+io.on("connection", (socket) => {
+  console.log("a user connected");
+  socket.on("disconnect", () => {
+    console.log("user disconnected");
+  });
+  setInterval(() => {
+    socket.emit("number", parseInt(Math.random() * 10));
+  }, 1000);
+});
+
 var port = process.env.port || 3000;
-app.listen(port, () => {
+server.listen(port, () => {
   console.log("App listening to: " + port);
 });

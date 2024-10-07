@@ -1,14 +1,14 @@
 {
-  "name": "sit725-2024-t2-prac4",
+  "name": "sit725-2024-t2-prac7",
   "version": "1.0.0",
-  "description": "SIT725-Task 4.2P - Add A Database",
+  "description": "SIT725-Task 7.3P - Sockets",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kiprotichmartin/sit725-2024-t2-prac4.git"
+    "url": "git+https://github.com/kiprotichmartin/sit725-2024-t2-prac7.git"
   },
   "keywords": [
     "Nodejs",
@@ -21,13 +21,15 @@
   "author": "Martin Kiprotich Kosgei",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kiprotichmartin/sit725-2024-t2-prac4/issues"
+    "url": "https://github.com/kiprotichmartin/sit725-2024-t2-prac7/issues"
   },
-  "homepage": "https://github.com/kiprotichmartin/sit725-2024-t2-prac4#readme",
+  "homepage": "https://github.com/kiprotichmartin/sit725-2024-t2-prac7#readme",
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
+    "http": "^0.0.1-security",
     "mongodb": "^6.9.0",
-    "mongoose": "^8.7.0"
+    "mongoose": "^8.7.0",
+    "socket.io": "^4.8.0"
   }
 }
