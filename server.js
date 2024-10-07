@@ -1,5 +1,9 @@
 var express = require("express");
 var app = express();
+const mongoose = require("mongoose");
+require("dotenv").config();
+
+const mongoString = process.env.DATABASE_URL;
 
 app.use(express.static(__dirname + "/public"));
 app.use(express.json());
@@ -25,6 +29,17 @@ const cardList = [
     desciption: "Demo desciption about tornadoes",
   },
 ];
+
+mongoose.connect(mongoString);
+const database = mongoose.connection;
+
+database.on("error", (error) => {
+  console.log(error);
+});
+
+database.once("connected", () => {
+  console.log("Database Connected");
+});
 
 app.get("/api/projects", (req, res) => {
   res.json({ statusCode: 200, data: cardList, message: "Success" });

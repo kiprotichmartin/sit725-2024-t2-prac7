@@ -19,6 +19,14 @@ const cardList = [
   },
 ];
 
+const getProjects = () => {
+  $.get("/api/projects", (response) => {
+    if (response.statusCode == 200) {
+      addCards(response.data);
+    }
+  });
+};
+
 const clickMe = () => {
   alert("Thanks for clicking me. Hope you have a nice day!");
 };
